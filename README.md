@@ -67,7 +67,7 @@ Please check our paper to find out more evaluation results.
 If you find this helpful, please cite our work:
 ```
 @inproceedings{NWH2024,
-author = {Nishant Vishwamitra, Keyan Guo, Farhan Tajwar Romit, Isabelle Ondracek, Long Cheng, Ziming Zhao, Hongxin Hu},
+author = {Nishant Vishwamitra and Keyan Guo and Farhan Tajwar Romit and Isabelle Ondracek and Long Cheng and Ziming Zhao and Hongxin Hu},
 title = {{Moderating New Waves of Online Hate with Chain-of-Thought Reasoning in Large Language Models}},
 booktitle = {{IEEE Symposium on Security and Privacy (S\&P)}},
 publisher = {IEEE},
