@@ -1,8 +1,7 @@
 # New Waves of Online Hate Moderation
 
-This repository provides the data and code for the paper **Moderating New Waves of Online Hate with Chain-of-Thought Reasoning in Large Language Models**, accepted in IEEE Symposium on Security and Privacy (S&P) 2024.
+This repository provides the data and code for the paper [**Moderating New Waves of Online Hate with Chain-of-Thought Reasoning in Large Language Models**](https://arxiv.org/abs/2312.15099), accepted in *IEEE Symposium on Security and Privacy* (S&P) 2024.
 
-[Paper link](https://arxiv.org/abs/2312.15099)
 
 ## Data 
 Please fill out the [consent form](new_waves_dataset_consent_form.docx) and send emails to access our data.
