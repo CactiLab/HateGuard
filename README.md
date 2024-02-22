@@ -65,11 +65,21 @@ Please check our paper to find out more evaluation results.
 ## Cite
 If you find this helpful, please cite our work:
 ```
-@inproceedings{NWH2024,
-author = {Nishant Vishwamitra and Keyan Guo and Farhan Tajwar Romit and Isabelle Ondracek and Long Cheng and Ziming Zhao and Hongxin Hu},
-title = {{Moderating New Waves of Online Hate with Chain-of-Thought Reasoning in Large Language Models}},
-booktitle = {{IEEE Symposium on Security and Privacy (S\&P)}},
-publisher = {IEEE},
-year = {2024}
+@INPROCEEDINGS {,
+author = {N. Vishwamitra and K. Guo and F. Romit and I. Ondracek and L. Cheng and Z. Zhao and H. Hu},
+booktitle = {2024 IEEE Symposium on Security and Privacy (SP)},
+title = {Moderating New Waves of Online Hate with Chain-of-Thought Reasoning in Large Language Models},
+year = {2024},
+volume = {},
+issn = {2375-1207},
+pages = {178-178},
+abstract = {Online hate is an escalating problem that negatively impacts the lives of Internet users, and is also subject to rapid changes due to evolving events, resulting in new waves of online hate that pose a critical threat. Detecting and mitigating these new waves present two key challenges: it demands reasoning-based complex decision-making to determine the presence of hateful content, and the limited availability of training samples hinders updating the detection model. To address this critical issue, we present a novel framework called HateGuard for effectively moderating new waves of online hate. HateGuard employs a reasoning-based approach that leverages the recently introduced chain-of-thought (CoT) prompting technique, harnessing the capabilities of large language models (LLMs). HateGuard further achieves prompt-based zero-shot detection by automatically generating and updating detection prompts with new derogatory terms and targets in new wave samples to effectively address new waves of online hate. To demonstrate the effectiveness of our approach, we compile a new dataset consisting of tweets related to three recently witnessed new waves: the 2022 Russian invasion of Ukraine, the 2021 insurrection of the US Capitol, and the COVID-19 pandemic. Our studies reveal crucial longitudinal patterns in these new waves concerning the evolution of events and the pressing need for techniques to rapidly update existing moderation tools to counteract them. Comparative evaluations against state-of-the-art tools illustrate the superiority of our framework, showcasing a substantial 22.22% to 83.33% improvement in detecting the three new waves of online hate. Our work highlights the severe threat posed by the emergence of new waves of online hate and represents a paradigm shift in addressing this threat practically.},
+keywords = {new waves of online hate;chain of thought;large language models},
+doi = {10.1109/SP54263.2024.00096},
+url = {https://doi.ieeecomputersociety.org/10.1109/SP54263.2024.00096},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month = {may}
 }
+
 ```
