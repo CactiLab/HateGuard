@@ -7,7 +7,10 @@ This repository provides the data and code for the paper [**Moderating New Waves
 Please fill out the [consent form](new_waves_dataset_consent_form.docx) and send emails to access our data.
 
 ### Annotation Codebook
-![codebook](https://github.com/CactiLab/HateGuard/assets/90410389/5b7aeb39-2dba-4818-9578-204421d5f2bd)
+<p align="center">
+  <img src="[figures/ugcg-cot.png](https://github.com/CactiLab/HateGuard/assets/90410389/5b7aeb39-2dba-4818-9578-204421d5f2bd)" alt="drawing" style="width:500px;"/>
+</p>
+<!-- ![codebook](https://github.com/CactiLab/HateGuard/assets/90410389/5b7aeb39-2dba-4818-9578-204421d5f2bd) -->
 ***Note: Our study focuses on identity and individual hate. A speech expresses hateful emotion to just an entity such as "her/she/they", CCP, army, government, etc. would not be considered.***
 
 
