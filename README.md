@@ -8,7 +8,7 @@ Please fill out the [consent form](new_waves_dataset_consent_form.docx) and send
 
 ### Annotation Codebook
 <p align="center">
-  <img src="figures/codebook.png" alt="drawing" style="width:500px;"/>
+  <img src="figures/codebook.png" alt="drawing" style="width:650px;"/>
 </p>
 <!-- ![codebook](https://github.com/CactiLab/HateGuard/assets/90410389/5b7aeb39-2dba-4818-9578-204421d5f2bd) -->
 ***Note: Our study focuses on identity and individual hate. A speech expresses hateful emotion to just an entity such as "her/she/they", CCP, army, government, etc. would not be considered.***
