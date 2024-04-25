@@ -36,8 +36,8 @@ Q3B: If Q2's answer is 'Yes', are those words or phrases directed towards or tar
 Q4A: If Q3A's answer is 'Yes', do those terms incite hate against the selected identities?
 Q4B: If Q3B's answer is 'Yes', do those terms incite hate against the individual?
 Q5A: If Q4A’s 'Yes', the comment can be concluded as identity hate speech. Tell me your final conclusion: 'Identity Hate' or 'Non-hate'.
-Q5B: If Q4B’s 'Yes', the comment can be concluded as individual hate speech. Tell me your final conclusion: 'Individual Hate' or 'Non-hate'
-""
+Q5B: If Q4B’s 'Yes', the comment can be concluded as individual hate speech. Tell me your final conclusion: 'Individual Hate' or 'Non-hate'.
+"""
 ```
 
 
