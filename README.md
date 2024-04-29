@@ -17,10 +17,10 @@ Please fill out the [consent form](new_waves_dataset_consent_form.docx) and send
 ## HateGuard
 ![framework](figures/framework.png)
 
-Our framework can be integrated with current popular large language models, such as [ChatGPT](https://chat.openai.com/auth/login), [Llama 2](https://ai.meta.com/llama/), [Palm2](https://ai.google/discover/palm2/). The best results were generated with [GPT-4](https://openai.com/research/gpt-4).
+Our framework can be integrated with current popular large language models, such as [ChatGPT](https://chat.openai.com/auth/login), [Llama 2](https://ai.meta.com/llama/), [Llama 3](https://llama.meta.com/llama3/), [Palm2](https://ai.google/discover/palm2/),  [Gemini](https://gemini.google.com). The current presented results were generated with [GPT-4](https://openai.com/research/gpt-4).
 
 ### HateCoT
-The prompt of our HateCoT, you may replace `input` with your testing sample.
+The prompt of our HateCoT, you may replace `input` with your testing sample. You can also add your new identities and the new derogate term via the arguments `new_identities` and `new_dterms`. Simply remove them if there's not. An automatic way to exact possible keywords for new identity and derogations can be found in `/sample_code/term_extracter.ipynb`.
 ```
 cot_prompt = """
 Consider the following comment, and carefully answer the questions in each step to conclude whether it is hate speech or not: 
@@ -28,16 +28,16 @@ comment:"{input}"
 
 Let's think of it in the following steps:
 Q1A: Which of the following identities are mentioned in the text?
-'race', 'nationality', 'age', 'political', 'religion', ‘disability’, '(anti-)masker', '(anti-)vaxxer'
+'race', 'nationality', 'age', 'political', 'religion', 'disability', '(anti-)masker', '(anti-)vaxxer'{new_identities}
 Q1B: Are there any individuals mentioned explicitly by their name?
-Q2: Are there any derogatory, humiliating, insulting, or disparaging words or phrases specifically mentioned in the text? (Note: Colloquially usage of the words should not be considered)
+Q2: Are there any derogatory, humiliating, insulting, or disparaging words or phrases{new_dterms} specifically mentioned in the text? (Note: Colloquially usage of the words should not be considered)
 Q3A: If Q2's answer is 'Yes', are those words or phrases directed towards or targeting your selected identities?
 Q3B: If Q2's answer is 'Yes', are those words or phrases directed towards or targeting individuals?
 Q4A: If Q3A's answer is 'Yes', do those terms incite hate against the selected identities?
 Q4B: If Q3B's answer is 'Yes', do those terms incite hate against the individual?
-Q5A: If Q4A’s 'Yes', the comment can be concluded as identity hate speech. Tell me your final conclusion: 'Identity Hate' or 'Non-hate'.
-Q5B: If Q4B’s 'Yes', the comment can be concluded as individual hate speech. Tell me your final conclusion: 'Individual Hate' or 'Non-hate'
-""
+Q5A: If Q4A's answer is 'Yes', the comment can be concluded as identity hate speech. Tell me your final conclusion: 'Identity Hate' or 'Non-hate'.
+Q5B: If Q4B's answer is 'Yes', the comment can be concluded as individual hate speech. Tell me your final conclusion: 'Individual Hate' or 'Non-hate'.
+"""
 ```
 
 
