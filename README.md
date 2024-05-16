@@ -21,7 +21,7 @@ Our framework can be integrated with current popular large language models, such
 The current presented results were generated with [GPT-4](https://openai.com/research/gpt-4).
 
 ### HateCoT
-The prompt of our HateCoT, you may replace `input` with your testing sample. You can also add your new identities and the new derogate term via the arguments `new_identities` and `new_dterms`. Simply remove them if there's not. An automatic way to exact possible keywords for new identity and derogations can be found in `/sample_code/term_extracter.ipynb`.
+The prompt of our HateCoT, you may replace `input` with your testing sample. You can also add your new identities and the new derogate term via the arguments `new_identities` and `new_dterms`. Simply remove them if there's not. An automatic way to exact possible keywords for new identity and derogations can be found in `/sample_code/utils/term_extracter.ipynb`.
 ```
 cot_prompt = """
 Consider the following comment, and carefully answer the questions in each step to conclude whether it is hate speech or not: 
