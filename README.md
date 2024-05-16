@@ -1,6 +1,6 @@
 # New Waves of Online Hate Moderation
 
-This repository provides the data and code for the paper [**Moderating New Waves of Online Hate with Chain-of-Thought Reasoning in Large Language Models**](https://arxiv.org/abs/2312.15099), accepted in *IEEE Symposium on Security and Privacy* (S&P) 2024.
+This repository provides the data and code for the paper [**Moderating New Waves of Online Hate with Chain-of-Thought Reasoning in Large Language Models**](https://www.computer.org/csdl/proceedings-article/sp/2024/313000a177/1V5U7gBYIh2), accepted in *IEEE Symposium on Security and Privacy* (S&P) 2024.
 
 
 ## Data 
@@ -10,17 +10,18 @@ Please fill out the [consent form](new_waves_dataset_consent_form.docx) and send
 <p align="center">
   <img src="figures/codebook.png" alt="drawing" style="width:650px;"/>
 </p>
-<!-- ![codebook](https://github.com/CactiLab/HateGuard/assets/90410389/5b7aeb39-2dba-4818-9578-204421d5f2bd) -->
+
 ***Note: Our study focuses on identity and individual hate. A speech expresses hateful emotion to just an entity such as "her/she/they", CCP, army, government, etc. would not be considered.***
 
 
 ## HateGuard
 ![framework](figures/framework.png)
 
-Our framework can be integrated with current popular large language models, such as [ChatGPT](https://chat.openai.com/auth/login), [Llama 2](https://ai.meta.com/llama/), [Palm2](https://ai.google/discover/palm2/). The best results were generated with [GPT-4](https://openai.com/research/gpt-4).
+Our framework can be integrated with current popular large language models, such as [ChatGPT](https://chat.openai.com/auth/login), [Llama 2](https://ai.meta.com/llama/), [Llama 3](https://llama.meta.com/llama3/), [Palm2](https://ai.google/discover/palm2/),  [Gemini](https://gemini.google.com). 
+The current presented results were generated with [GPT-4](https://openai.com/research/gpt-4).
 
 ### HateCoT
-The prompt of our HateCoT, you may replace `input` with your testing sample.
+The prompt of our HateCoT, you may replace `input` with your testing sample. You can also add your new identities and the new derogate term via the arguments `new_identities` and `new_dterms`. Simply remove them if there's not. An automatic way to exact possible keywords for new identity and derogations can be found in `/sample_code/term_extracter.ipynb`.
 ```
 cot_prompt = """
 Consider the following comment, and carefully answer the questions in each step to conclude whether it is hate speech or not: 
@@ -28,16 +29,16 @@ comment:"{input}"
 
 Let's think of it in the following steps:
 Q1A: Which of the following identities are mentioned in the text?
-'race', 'nationality', 'age', 'political', 'religion', ‘disability’, '(anti-)masker', '(anti-)vaxxer'
+'race', 'nationality', 'age', 'political', 'religion', 'disability', '(anti-)masker', '(anti-)vaxxer'{new_identities}
 Q1B: Are there any individuals mentioned explicitly by their name?
-Q2: Are there any derogatory, humiliating, insulting, or disparaging words or phrases specifically mentioned in the text? (Note: Colloquially usage of the words should not be considered)
+Q2: Are there any derogatory, humiliating, insulting, or disparaging words or phrases{new_dterms} specifically mentioned in the text? (Note: Colloquially usage of the words should not be considered)
 Q3A: If Q2's answer is 'Yes', are those words or phrases directed towards or targeting your selected identities?
 Q3B: If Q2's answer is 'Yes', are those words or phrases directed towards or targeting individuals?
 Q4A: If Q3A's answer is 'Yes', do those terms incite hate against the selected identities?
 Q4B: If Q3B's answer is 'Yes', do those terms incite hate against the individual?
-Q5A: If Q4A’s 'Yes', the comment can be concluded as identity hate speech. Tell me your final conclusion: 'Identity Hate' or 'Non-hate'.
-Q5B: If Q4B’s 'Yes', the comment can be concluded as individual hate speech. Tell me your final conclusion: 'Individual Hate' or 'Non-hate'
-""
+Q5A: If Q4A's answer is 'Yes', the comment can be concluded as identity hate speech. Tell me your final conclusion: 'Identity Hate' or 'Non-hate'.
+Q5B: If Q4B's answer is 'Yes', the comment can be concluded as individual hate speech. Tell me your final conclusion: 'Individual Hate' or 'Non-hate'.
+"""
 ```
 
 
@@ -73,18 +74,18 @@ Please check our paper to find out more evaluation results.
 ## Cite
 If you find this helpful, please cite our work:
 ```
-@INPROCEEDINGS {HateGuard,
+@INPROCEEDINGS {,
 author = {N. Vishwamitra and K. Guo and F. Romit and I. Ondracek and L. Cheng and Z. Zhao and H. Hu},
 booktitle = {2024 IEEE Symposium on Security and Privacy (SP)},
 title = {Moderating New Waves of Online Hate with Chain-of-Thought Reasoning in Large Language Models},
 year = {2024},
 volume = {},
 issn = {2375-1207},
-pages = {178-178},
+pages = {181-181},
 abstract = {Online hate is an escalating problem that negatively impacts the lives of Internet users, and is also subject to rapid changes due to evolving events, resulting in new waves of online hate that pose a critical threat. Detecting and mitigating these new waves present two key challenges: it demands reasoning-based complex decision-making to determine the presence of hateful content, and the limited availability of training samples hinders updating the detection model. To address this critical issue, we present a novel framework called HateGuard for effectively moderating new waves of online hate. HateGuard employs a reasoning-based approach that leverages the recently introduced chain-of-thought (CoT) prompting technique, harnessing the capabilities of large language models (LLMs). HateGuard further achieves prompt-based zero-shot detection by automatically generating and updating detection prompts with new derogatory terms and targets in new wave samples to effectively address new waves of online hate. To demonstrate the effectiveness of our approach, we compile a new dataset consisting of tweets related to three recently witnessed new waves: the 2022 Russian invasion of Ukraine, the 2021 insurrection of the US Capitol, and the COVID-19 pandemic. Our studies reveal crucial longitudinal patterns in these new waves concerning the evolution of events and the pressing need for techniques to rapidly update existing moderation tools to counteract them. Comparative evaluations against state-of-the-art tools illustrate the superiority of our framework, showcasing a substantial 22.22% to 83.33% improvement in detecting the three new waves of online hate. Our work highlights the severe threat posed by the emergence of new waves of online hate and represents a paradigm shift in addressing this threat practically.},
 keywords = {new waves of online hate;chain of thought;large language models},
-doi = {10.1109/SP54263.2024.00096},
-url = {https://doi.ieeecomputersociety.org/10.1109/SP54263.2024.00096},
+doi = {10.1109/SP54263.2024.00181},
+url = {https://doi.ieeecomputersociety.org/10.1109/SP54263.2024.00181},
 publisher = {IEEE Computer Society},
 address = {Los Alamitos, CA, USA},
 month = {may}
