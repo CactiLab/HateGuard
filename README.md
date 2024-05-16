@@ -74,7 +74,7 @@ Please check our paper to find out more evaluation results.
 ## Cite
 If you find this helpful, please cite our work:
 ```
-@INPROCEEDINGS {,
+@INPROCEEDINGS {HateGuard,
 author = {N. Vishwamitra and K. Guo and F. Romit and I. Ondracek and L. Cheng and Z. Zhao and H. Hu},
 booktitle = {2024 IEEE Symposium on Security and Privacy (SP)},
 title = {Moderating New Waves of Online Hate with Chain-of-Thought Reasoning in Large Language Models},
