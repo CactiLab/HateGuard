@@ -21,7 +21,7 @@ Our framework can be integrated with current popular large language models, such
 The current presented results were generated with [GPT-4](https://openai.com/research/gpt-4).
 
 ### HateCoT
-For running inference on your sample, you may replace input with your testing sample in the prompt of HateCoT. You can also add your new identities and the new derogatory terms (ours can be found in [```sample_code/terms_new_waves.jsonl```](sample_code/terms_new_waves.jsonl)) via the arguments new_identities and new_dterms, respectively. Simply remove them if there's not. An automatic way to extract possible keywords for new identities and derogatory terms can be found in [```sample_code/utils/term_extracter.py```](sample_code/utils/term_extracter.py) and [```sample_code/utils/term_extracter.ipynb```](sample_code/utils/term_extracter.ipynb).
+For running inference on your sample, you may replace input with your testing sample in the prompt of HateCoT. You can also add your new identities and the new derogatory terms (ours can be found in [```sample_code/terms_new_waves.jsonl```](sample_code/terms_new_waves.jsonl)) via the arguments new_identities and new_dterms, respectively. Simply remove them if there's not. An automatic way to extract possible keywords for new identities and derogatory terms can be found in [```sample_code/utils/term_extracter.py```](sample_code/utils/term_extracter.py).
 ```
 cot_prompt = """
 Consider the following comment, and carefully answer the questions in each step to conclude whether it is hate speech or not: 
